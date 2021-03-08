@@ -1,4 +1,4 @@
-##This code collects the DCs in the domain and the size of the NTDS.dit on each DC##
+###This code collects the DCs in the domain and the size of the NTDS.dit on each DC###
 $dcs = (Get-ADDomainController).Name
 $dbs = Invoke-Command -ComputerName $dcs -ScriptBlock {
     Get-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\NTDS\Parameters
