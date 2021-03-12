@@ -1,0 +1,1 @@
+Robocopy \\SourceServer\SourceDir <Driveletter>:\DestFolder /E /S /Z /B /Log:<Driveletter>:\Robocopy.Log
