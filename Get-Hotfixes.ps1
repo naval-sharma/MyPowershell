@@ -1,0 +1,1 @@
+get-content .\computers.txt | Where {$_ -AND (Test-Connection $_ -Quiet)} | foreach{ Get-Hotfix -id KB4012212 -computername $_ | Select CSName,Description,HotFixID,InstalledBy,InstalledOn | convertto-csv | out-file "C:\$_.csv" } 
